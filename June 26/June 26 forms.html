@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Forms</title>
+    </head>
+    <body>
+        
+        <!-- Forms -->
+        <!-- input type= text, email, password, number, radio, checkbox -->
+        <form>
+
+            <label for="nameinput">Name: </label>
+            <input type="text" id="nameinput" placeholder="Enter name" name="name" minlength="5" value="sdhgn" maxlength="10" required disabled>
+
+            <label for="emailinput">Email</label>
+            <input type="email" id="emailinput" name="email" required>
+
+            <label for="phoneinput">Phone</label>
+            <input type="text" id="phoneinput" name="phone" pattern="^[9876][0-9]{9}$" required>
+            
+            <label for="keyinput">Password</label>
+            <input type="password" id="keyinput" name="password" required>
+            
+            <label for="numinput">Quantity</label>
+            <input type="number" step="0.000001" name="quantity" min="10" max="15" id="numinput" required>
+
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="male" checked>
+
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="female">
+
+            <select name="mychoice" multiple>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+
+            <button>Submit</button>
+            <button type="reset">Reset</button>
+            <button type="button">Cancel</button>
+        </form>
+
+        <button>Button outside form</button>
+    </body>
+</html>

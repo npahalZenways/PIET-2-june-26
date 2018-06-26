@@ -1,0 +1,96 @@
+<html>
+    <head>
+
+        <!-- external styles -->
+        <!-- <link rel="stylesheet" href="./styles.css"> -->
+        <style>
+            /* internal styles */
+            /* p{
+                color: aqua;
+                padding: 15px;
+                margin: 10px;
+                border: 1px solid black;
+            } */
+
+            /* selectors */
+            /* tag-name selector */
+            p{
+                color: blue
+            }
+
+            /* class selector */
+            .myEle{
+                color: brown
+            }
+
+            /* id selector */
+            #para{
+
+            }
+
+            /* selects all p elements which lie inside a div */
+            div p{
+                color: green
+            }
+
+            /* selects all p elements which are immediate childs of div */
+            div > p{
+                color: crimson
+            }
+
+            /* selects all p tags which lie immediately after div */
+            div + p{
+               color: deeppink 
+            }
+
+            /* attribute selectors */
+            [abcd]{
+                font-size: 30px;
+            }
+
+            [abcd="abc"]{
+                color: red;
+            }
+
+            /* pseudo classes */
+            p:hover{
+                color: aqua
+            }
+
+            p:first-child{
+                background-color: red;
+            }
+
+            div > p:first-child{
+                background-color: blue;
+            }
+
+            /* value inside nth-child could be integer or even or odd */
+            p:nth-child(even){
+
+            }
+        </style>
+
+    </head>
+    <body>
+        <!-- inline styles -->
+        <p abcd="abc">This is para</p>
+        <p class="myEle">This is para</p>
+        <p>This is para</p>
+        <p>This is para</p>
+        <div>
+            <p>Para inside div</p>
+            <p class="myEle">Para inside div</p>
+            <section>
+                <p>
+                    para inside section tag
+                </p>
+            </section>
+        </div>
+
+        <p>Para immediately after div</p>
+        <p>Para immediately after para</p>
+
+        <div class="myEle">This is a div</div>
+    </body>
+</html>

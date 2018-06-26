@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+            /* p{
+                display: inline-block;
+                background-color: yellow;
+                padding: 10px;
+            } */
+            p{
+                background-color: yellow;
+                padding: 10px;
+                height: 100px;;
+            }
+
+            /* 
+                flex-direction: row (default)
+                    primary-axis: x-axis
+                    secondary-axis: y-axis
+
+                justify-content: works on primary-axis - flex-start, flex-end, center, space-between, space-around, space-evenly
+
+                align-items: secondary-axis - flex-start, flex-end, center
+            */
+            div{
+                display: flex;
+                background-color: blue;
+                height: 500px;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div>
+            <p>This is a para</p>
+            <p>This is a para</p>
+            <p>This is a para</p>
+            <p>This is a para</p>
+        </div>
+
+        <p>para</p>
+        <p>para</p>
+        <p>para</p>
+        
+    </body>
+</html>
