@@ -1,6 +1,6 @@
 import { skill } from "./decorator";
 
-// classs decorator
+
 @skill('dfghjk')
 class player{
     skill;
