@@ -1,0 +1,68 @@
+
+
+<!-- structural directives : works on the structure of an element i.e., create or destroy the structure of an element in the DOM -->
+<!-- *ngIf="condition" Angular 2 -->
+<!-- [ngIf]="condition" -->
+<button (click)="isTrue = !isTrue">Toggle</button>
+
+<!-- *ngIf="condition; else TRV of ng-template" Angular 4, 5, 6-->
+
+<p *ngIf="isTrue; else abc">The condition is true</p>
+
+<ng-template #abc>
+    <p>
+        This condition is false and this is else part
+    </p>
+</ng-template>
+
+<!-- *ngIf="condition; then TRV of ng-template; else TRV of ng-template" Angular 6-->
+
+<div *ngIf="isTrue; then thenBlock; else elseBlock">condition div</div>
+
+<ng-template #thenBlock>
+    <p>condition is true, this is then block</p>
+</ng-template>
+<ng-template #elseBlock>
+    <p>condition is false, this is else block</p>
+</ng-template>
+
+<!-- ngSwitch -->
+
+<input type="text" [(ngModel)]="switchCondition">
+
+<div [ngSwitch]="switchCondition">
+    <p *ngSwitchCase="'Nitin'">Name is Nitin</p>
+    <p *ngSwitchCase="'Amit'">Name is Amit</p>
+    <p *ngSwitchDefault>Nothing matched</p>
+</div>
+
+<!-- *ngFor="let element of array" -->
+
+<button (click)="myArr.push(10)">Push</button>
+<button (click)="myArr.pop()">Pop</button>
+
+<!-- <p>{{myArr[0]}}</p>
+<p>{{myArr[1]}}</p>
+<p>{{myArr[2]}}</p>
+<p>{{myArr[3]}}</p>
+<p>{{myArr[4]}}</p> -->
+
+<p *ngFor="let el of myArr; let i = index; let e = even">if even or not = {{e}}, index = {{i}}, element = {{el}}</p>
+
+<!-- attribute directives : works on the appearance of an elements -->
+
+<!-- ngModel : FormsModule-->
+
+<!-- [ngClass] =" { 
+    'class_name': condition,
+    'class_name': condition
+} "-->
+
+<p [ngClass]="{
+    'active': switchCondition == 'Nitin',
+    'in-active': switchCondition == 'Amit',
+    'true-class': isTrue,
+    'false-class': !isTrue
+}">
+    NgClass directive
+</p>

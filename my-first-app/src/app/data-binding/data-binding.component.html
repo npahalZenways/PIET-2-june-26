@@ -1,0 +1,40 @@
+<!-- one-way binding -->
+<!-- interpolation -->
+
+<p>
+  Name of this component is {{componentName}}
+</p>
+
+<p>
+  Name of this component is {{componentName ? componentName : 'Not found'}}
+</p>
+
+<p>
+  Name of this component is {{returnName()}}
+</p>
+
+<!-- property binding -->
+<a [href]="linkUrl">Google</a>
+
+<!-- class binding [class.class_name]="condition"-->
+<p [class.abc]="isTrue" class="active">This is class binding</p>
+<button (click)="isTrue = !isTrue">Toogle class condition</button>
+
+<!-- event binding -->
+<button (click)="linkUrl = 'https:www.w3schoools.com'; componentName = 'New name'; print($event)">Click button</button>
+
+<!-- two-way binding -->
+<!-- two way binding can work anywhere, where we have a property x and an event xChange, there we can write [(x)]="property" -->
+
+<input type="text" [(ngModel)]="componentName">
+
+<!-- local template variable or template referrence variable -->
+<p #para>
+  This is a para
+</p>
+
+<p #para2>
+  This is another para
+</p>
+
+<button (click)="print(para,para2)">Print</button>

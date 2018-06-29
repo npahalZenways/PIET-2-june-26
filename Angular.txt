@@ -1,0 +1,34 @@
+gulp/grunt
+	- task runner
+webpack
+	- module bundler
+webpack-dev-server
+	- development server
+
+Angular cli commands
+ng new app-name - to create a new app
+
+ng serve - to start an angular application and host it onto a local server
+
+ng generate component component-name
+
+
+@NgModule decorator
+imports - array - define modules
+provider - array - services
+declarations - array - remaining things
+
+bootstrap - array - initial components
+exports - array - exported things
+entryComponents - array - components which should be initiated instantly
+
+class - module
+
+@Component
+selector - string - selects defined string in application and create an instance of component there with its view/template
+template - string - html code
+templateUrl - string - html file url
+styles - array - e.g - '.active{ color: red}', 'p{ color: blue }'
+styleUrls - array - array of style sheets's url
+
+class - component
