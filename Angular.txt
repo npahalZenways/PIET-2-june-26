@@ -71,3 +71,25 @@ Data-sharing between parent and child components
 		- here we use property binding on child component's instance
 	Output - getting data from child component into parent component
 		- here we use event binding on child component's instance
+
+===========================================================================
+Pipes
+
+Used to change the view value, ( | ) pipe operator
+
+@Pipe decorator - used to make a class behave as a Pipe
+
+PipeTransform interface - to provide transform method
+
+===========================================================================
+Lifecycle hooks
+
+ngOnChanges()
+ngOnInit()
+ngDoChecked()
+ngAfterContentInit()
+ngAfterContentChecked()
+ngAfterViewInit()
+ngAfterViewChecked()
+ngOnDestroy()
+
