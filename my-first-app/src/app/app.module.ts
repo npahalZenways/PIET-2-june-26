@@ -7,6 +7,8 @@ import { InBuiltDirectivesComponent } from './in-built-directives/in-built-direc
 import { ComponentOneComponent } from './data-sharing-between-components/component-one/component-one.component';
 import { ComponentTwoComponent } from './data-sharing-between-components/component-two/component-two.component';
 import { FormsModule } from "@angular/forms";
+import { CustomPipe } from './custom.pipe';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { FormsModule } from "@angular/forms";
     DataBindingComponent,
     InBuiltDirectivesComponent,
     ComponentOneComponent,
-    ComponentTwoComponent
+    ComponentTwoComponent,
+    CustomPipe,
+    PipesComponent
     // remaining things - components, directives, pipes
   ],
   imports: [

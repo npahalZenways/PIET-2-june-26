@@ -1,0 +1,41 @@
+<!-- pipes -->
+
+<!-- date pipe -->
+<p>Todays's date :- {{today}}</p>
+
+<p>Todays's date with datePipe:- {{today | date | uppercase}}</p>
+
+<p>Todays's date with datePipe and parameter short:- {{today | date : 'short'}}</p>
+
+<p>Todays's date with datePipe and custom format parameter:- {{today | date:'dd @ MM @ yyyy'}}</p>
+
+<!-- uppercase or lowercase pipe -->
+
+<p>String: {{myString}}</p>
+
+<p>String with uppercase pipe: {{myString | uppercase}}</p>
+
+<p>String with lowercase pipe: {{myString | lowercase}}</p>
+
+<!-- DecimalPipe - number -->
+
+<p>Number: {{num}}</p>
+
+<p>Number with number pipe: {{num | number}}</p>
+
+<!-- number: '{{minimum digits before decimal}}.{{minimum digits after decimal}}-{{minimum digits after decimal}}' -->
+
+<p>Number with number pipe with parameter: {{num | number:'10.1-2'}}</p>
+
+<!-- currencyPipe - currency -->
+
+<p>Currency with currencyPipe: {{num | currency}}</p>
+
+<!-- currency: currencyCode: display - code, symbol, symbol-narrow, string: digitInfo  -->
+
+<p>Currency with currencyPipe and parameter: {{num | currency: 'CAD':'symbol-narrow':'2.3-5'}}</p>
+
+<!-- custom pipe -->
+<p>
+  Custom uppercase pipe : {{ myString | custom: 'uppercase'}}
+</p>

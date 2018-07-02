@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-component-two',
   templateUrl: './component-two.component.html',
-  styles: []
+  styles: [],
+  inputs:[],
+  outputs: []
 })
-export class ComponentTwoComponent implements OnInit {
+export class ComponentTwoComponent{
+
+  @Input('lkjhgfd') myprop;
+
+  @Output('child') myoutput = new EventEmitter();
+
+  test = "hello this is output string";
 
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

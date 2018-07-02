@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComponentOneComponent implements OnInit {
 
+  myInput = 'hello';
+
+  print(e){
+    console.log('outoout received', e);
+  }
+
   constructor() { }
 
   ngOnInit() {

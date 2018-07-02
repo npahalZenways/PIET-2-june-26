@@ -1,3 +1,13 @@
-<p>
-  component-one works!
-</p>
+<div class="border p-4">
+  
+  <p>
+    component-one works!
+  </p>
+
+  <input type="text" [(ngModel)]="myInput">
+
+</div>
+
+<div class="border p-4">
+  <app-component-two [lkjhgfd]="myInput" (child)="print($event)"></app-component-two>
+</div>

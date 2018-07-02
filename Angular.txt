@@ -10,7 +10,9 @@ ng new app-name - to create a new app
 
 ng serve - to start an angular application and host it onto a local server
 
-ng generate component component-name
+ng generate component component-name - to generate a new component
+
+ng generate pipe pipe-name - to generate a new pipe
 
 ========================================================================
 @NgModule decorator
@@ -60,3 +62,12 @@ In-built-directives
 		- ngModel
 		- ngClass
 		- ngNonBindable
+
+===========================================================================
+
+Data-sharing between parent and child components
+
+	Input - sending data from parent component to child component
+		- here we use property binding on child component's instance
+	Output - getting data from child component into parent component
+		- here we use event binding on child component's instance

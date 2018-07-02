@@ -1,3 +1,11 @@
 <p>
   component-two works!
 </p>
+
+<p>
+  Received input is {{myprop}}
+</p>
+
+<input type="text" [(ngModel)]="test">
+
+<button (click)="myoutput.emit(test)">Send output</button>
