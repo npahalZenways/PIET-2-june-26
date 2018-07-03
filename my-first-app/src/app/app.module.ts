@@ -9,6 +9,12 @@ import { ComponentTwoComponent } from './data-sharing-between-components/compone
 import { FormsModule } from "@angular/forms";
 import { CustomPipe } from './custom.pipe';
 import { PipesComponent } from './pipes/pipes.component';
+import { MyService } from './my-service';
+import { RouterModule } from "@angular/router";
+import { Error404 } from './error-404';
+import { Dashboard } from './dashboard/dashboard';
+import { LoginForm } from './login-form/login-form';
+import { AuthGuard } from './auth-guard';
 
 @NgModule({
   declarations: [
@@ -18,16 +24,55 @@ import { PipesComponent } from './pipes/pipes.component';
     ComponentOneComponent,
     ComponentTwoComponent,
     CustomPipe,
-    PipesComponent
+    PipesComponent,
+    Error404,
+    Dashboard,
+    LoginForm
     // remaining things - components, directives, pipes
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([{
+      path: '',
+      redirectTo: 'login',
+      pathMatch: 'full'
+    },{
+      path: 'admin',
+      canActivate: [AuthGuard],
+      loadChildren: './admin/admin#Admin'
+    },{
+      path: 'login',
+      component: LoginForm
+    },{
+      path: 'dashboard',
+      component: Dashboard,
+      children: [{
+        path: '',
+        redirectTo: 'data-binding',
+        pathMatch: 'full'
+      },{
+        path: 'in-built-directives',
+        component: InBuiltDirectivesComponent
+      },{
+        path: 'pipes/:id',
+        component: PipesComponent,
+        data: {
+          titleInfo: 'pipe path'
+        }
+      },{
+        path: 'data-binding',
+        component: DataBindingComponent
+      }]
+    },{
+      path: '**',
+      component: Error404
+    }])
     // modules
   ],
   providers: [
     // services
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { MyService } from '../my-service';
 
 @Component({
   selector: 'app-pipes',
   templateUrl: './pipes.component.html',
-  styles: []
+  styles: [],
+  providers: [MyService]
 })
-export class PipesComponent implements OnInit {
+export class PipesComponent {
 
   today = new Date();
 
@@ -13,9 +16,14 @@ export class PipesComponent implements OnInit {
 
   num = 12345.98765;
 
-  constructor() { }
+  constructor(
+    private ar: ActivatedRoute
+  ) { 
+    console.log(ar)
+  }
 
   ngOnInit() {
+    console.log('pipes initalised')
   }
 
 }

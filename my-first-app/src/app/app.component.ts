@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MyService } from './my-service';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,6 @@ export class AppComponent {
 
   defaultWidth = 200;
 
-  title = 'app';
+  title = 'appashzdcvn ';
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MyService } from "../my-service";
 
 @Component({
   selector: 'app-in-built-directives',
@@ -13,7 +14,13 @@ export class InBuiltDirectivesComponent implements OnInit {
 
   myArr = [1,2,3,4,5]
 
-  constructor() { }
+  constructor(
+    private serv: MyService
+  ) { 
+    setInterval(()=>{
+      console.log(serv.value)
+    }, 2000)
+  }
 
   ngOnInit() {
   }

@@ -14,6 +14,10 @@ ng generate component component-name - to generate a new component
 
 ng generate pipe pipe-name - to generate a new pipe
 
+ng generate service service_name - to generate a new service
+
+ng generate guard guard_name - to generate a guard
+
 ========================================================================
 @NgModule decorator
 imports - array - define modules
@@ -82,14 +86,30 @@ Used to change the view value, ( | ) pipe operator
 PipeTransform interface - to provide transform method
 
 ===========================================================================
+Services
+	- to make re-usable code or data-sharing between non-linked components
+
+@Injectable() decorator
+	- make a class behave as a service
+
+dependency injection
+
+providers - how this service is going to work
+
+providing a service - can be provided in multiple locations
+	- Component decorator - providers array or ViewProviders array
+	- Directive decorator - providers array
+	- NgModule decorator - providers array
+
+===========================================================================
 Lifecycle hooks
 
-ngOnChanges()
-ngOnInit()
-ngDoChecked()
-ngAfterContentInit()
-ngAfterContentChecked()
-ngAfterViewInit()
-ngAfterViewChecked()
-ngOnDestroy()
+ngOnChanges() - to check changes two-way data-binding
+ngOnInit() -  on initialisation of component
+ngDoChecked() - on checking non-angular things
+ngAfterContentInit() - after content initialisation 
+ngAfterContentChecked() - after content checked
+ngAfterViewInit() - after view initialisation 
+ngAfterViewChecked() - after view checked
+ngOnDestroy() - just before destroying the class
 

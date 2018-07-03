@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MyService } from '../my-service';
 
 @Component({
   selector: 'app-data-binding',
@@ -20,6 +21,12 @@ export class DataBindingComponent{
   print(...e){
     console.log(e)
   }
-  constructor() { }
+  constructor(
+    private serv: MyService
+  ) { 
+    setInterval(()=>{
+      console.log(serv.value)
+    }, 2000)
+  }
 
 }
