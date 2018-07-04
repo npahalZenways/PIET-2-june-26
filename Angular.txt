@@ -18,6 +18,8 @@ ng generate service service_name - to generate a new service
 
 ng generate guard guard_name - to generate a guard
 
+ng generate module module_name - to generate a module
+
 ========================================================================
 @NgModule decorator
 imports - array - define modules
@@ -113,3 +115,14 @@ ngAfterViewInit() - after view initialisation
 ngAfterViewChecked() - after view checked
 ngOnDestroy() - just before destroying the class
 
+===========================================================================
+
+Forms
+
+states
+	- Untouched
+	- Touched
+	- Pristine
+	- Dirty
+	- Invalid
+	- Valid
