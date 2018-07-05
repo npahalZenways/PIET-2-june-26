@@ -2,14 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
 import { AppComponent } from './app.component';
-import { SignupComponent } from './login/signup.component';
+import { MyDirective } from './my-directive';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MyDirective
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot([{
       path: '',
       redirectTo: 'login',
